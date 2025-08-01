@@ -229,8 +229,11 @@ vozesdascores_project/
 │   │   └── imagem.png  <-- SUA IMAGEM AQUI
 │   └── videos/
 │       └── video.mp4  <-- SEU VÍDEO AQUI
-├── templates/
-│   └── index.html           <-- SEU ARQUIVO HTML AQUI
+├── templates/         <-- SEU ARQUIVO HTML AQUI
+│   └── index.html
+├── registretion
+|     └── login.html
+|     └── singup.html           
 └── ... (outras pastas do projeto Django)
 ```
 Ação: Mova seus arquivos style.css, imagem.png e video.mp4 para as pastas correspondentes acima. Mova também seu arquivo HTML (index.html) para a pasta templates.
