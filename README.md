@@ -411,10 +411,7 @@ vozesdascores_project/
 ├── static/
 │   ├── css/
 │   │   └── style.css        <-- SEU ARQUIVO CSS AQUI
-│   ├── images/
-│   │   └── imagem.png  <-- SUA IMAGEM AQUI
-│   └── videos/
-│       └── video.mp4  <-- SEU VÍDEO AQUI
+|        └── stylelogin.css <-- CSS do login e singup
 ├── templates/         <-- SEU ARQUIVO HTML AQUI
 │   └── index.html
 ├── registretion
