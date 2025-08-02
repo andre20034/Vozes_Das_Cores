@@ -983,3 +983,5 @@ Aluno do TDS (Tecnico Desenvolvimento de Sistema)
 Autor: André Rodrigues
 
 GitHub: http://github.com/andre20034
+
+E-mail de contato: andre67192@estudante.ifb.edu.br
