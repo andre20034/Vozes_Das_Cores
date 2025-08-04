@@ -1,0 +1,195 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vozes das Cores - Janeiro Branco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Linha modificada para carregar o CSS com Django -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <header>
+    <nav>
+    {% if user.is_authenticated %}
+        <span>Olá, {{ user.username }}!</span>
+        <a href="{% url 'logout' %}">Sair</a>
+    {% else %}
+        <a href="{% url 'login' %}">Entrar</a>
+        <a href="{% url 'signup' %}">Cadastre-se</a>
+    {% endif %}
+    </nav>
+        <div class="container">
+            <h1>Vozes das Cores</h1>
+            <p>Um convite à Saúde Mental e Emocional</p>
+        </div>
+    </header>
+
+        <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#sobre-a-campanha">Campanha</a></li>
+                <li><a href="#sobre-nos">Sobre</a></li>
+                <li><a href="#importancia">Importância</a></li>
+                <li><a href="#cor-e-causa">Cor e Causa</a></li>
+                <li><a href="#Poder-da-mente">Poder da mente</a></li>
+                <li><a href="#prevencao">Como se Cuidar</a></li>
+                <li><a href="#dados-referencias">Referências</a></li>
+                <li><a href="#diario">Diário</a></li> <!-- NOVO LINK -->
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section id="sobre-a-campanha">
+                <h2>O Que é a Campanha Janeiro Branco?</h2>
+                <p>A campanha <strong>Janeiro Branco</strong> é um movimento dedicado à conscientização sobre a importância da saúde mental e emocional. Ela busca prevenir doenças como ansiedade, depressão e pânico, que podem ser causadas pelo estresse, além de abordar outros transtornos de humor como esquizofrenia e transtorno bipolar.</p>
+            </section>
+
+            <section id="sobre">
+                <h2>Sobre o Projeto "Vozes das Cores"</h2>
+                <p>Oi, sou André, um aluno do TDS, e o projeto <strong>Vozes das Cores</strong> tem como objetivo mostrar o significado das cores em cada mês do ano. Escolhi Janeiro, e sua cor é Branca, que significa saúde mental.
+                    Quero mostrar, com um pouco de história e ciência, a importância e a força que a mente tem sobre o corpo e algumas formas de prevenções. Além disso deixe uma forma de mensagem de como você esta lutando</p>
+            </section>
+
+            <section id="importancia">
+                <h2>Qual a Importância da Causa?</h2>
+                <p>A campanha é crucial para alertar a população sobre a necessidade de cuidar do bem-estar psicológico. O mês de janeiro foi escolhido por ser um período simbólico, no qual as pessoas tendem a refletir sobre suas vidas e emoções, como se tivessem uma "folha em branco" para recomeçar.</p>
+            </section>
+
+            <section id="cor-e-causa">
+                <h2>Cor e Causa</h2>
+                <p>A cor da campanha é o <strong>branco</strong>, simbolizando a "folha ou tela em branco" para que as pessoas possam reescrever suas histórias e focar na saúde mental. A causa principal é a conscientização e prevenção de doenças relacionadas ao estresse e saúde mental.</p>
+            </section>
+
+            <section id="novo-topico-1" class="new-topic">
+        <h2>Caso 1</h2>
+        <div class="images-wrapper">
+            <div class="video-item">
+                
+                
+                        <p>Jesus se dirige à mulher que sofria de uma hemorragia crônica por doze anos e que, desesperada, tocou em suas vestes, crendo firmemente que seria curada. Suas palavras são claras e poderosas: "Filha, a tua fé te salvou; vai em paz e sê curada deste teu mal."
+                            Como a neurociencia explica esse fato de aproximadamente 2000 anos atras? 
+                            <p>"Tua fé te curou." A ciência provou: crenças mudam
+                                sua biologia. Pensamento vira hormônio.
+                                Emoção vira doença ... ou cura. Jesus entendia o que
+                                você ainda está ignorando: a cura começa dentro.
+
+                                O poder da mente sobre o corpo não é misticismo, é
+                                ciência. Seus pensamentos e emoções são químicos
+                                que ativam ou desativam genes, que constroem ou
+                                destroem sua saúde. A fé, nesse contexto, é a certeza
+                                de que a mudança é possível, e seu corpo responde
+                                a isso.</p>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="novo-topico-2" class="new-topic">
+        <h2>Caso 2</h2>
+        <div class="images-wrapper">
+            <div class="image-item">
+                
+                        <p>Em 1964, Angela Cavallo, nos Estados Unidos, tornou-se famosa por levantar um carro para salvar seu filho, Tony, que ficou preso embaixo do veículo após um acidente.
+                            Ela ouviu o estrondo e correu para ajudar, encontrando o filho preso por um dos para-lamas traseiros. Sem pensar nas limitações, Angela levantou o carro com as próprias mãos, permitindo que os vizinhos libertassem Tony.
+                            Este ato heroico demonstrou a força que uma mãe pode atingir em situações de perigo. </p>
+                        <p>Nessa situação, o pensamento "tenho que salvar meu filho" impulsionou Angela a levantar o carro, que pesa cerca de 1.500 quilos.
+                            Em comparação, o recorde mundial de levantamento de peso (em categorias como powerlifting, que envolvem levantamento terra, agachamento e supino) para homens é de 501 kg no levantamento terra (Hafthor Bjornsson, embora haja controvérsias sobre o recorde fora de competição, e Benedikt Magnússon com 460.4 kg em competição) e, para mulheres, o recorde mundial no levantamento terra é de 305 kg (Becca Swanson). 
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="Poder-da-mente">
+                <h2>Poder da mente</h2>
+                <p>Em ambos os Casos acima, o ponto central é a quebra de barreiras. Seja pela ativação de mecanismos de sobrevivência ou pela força da crença espiritual, a mente se mostra capaz de superar limites físicos e emocionais, redefinindo o que consideramos possível. É uma prova inspiradora de que, em momentos de grande necessidade ou fé profunda, a mente humana detém um poder imenso, capaz de impulsionar atos de heroísmo e de manifestar o impossível.</p>
+            </section>
+
+            <section id="prevencao">
+                <h2>Como se Prevenir e Cuidar da Saúde Mental?</h2>
+                <ul>
+                    <li><strong>Cautela com Expectativas:</strong> Estabeleça metas realistas e divida-as em etapas para evitar frustrações.</li>
+                    <li><strong>Auto-observação:</strong> Pratique a auto-observação diária com generosidade, reconhecendo suas qualidades e habilidades para lidar com desafios.</li>
+                    <li><strong>Atividades Satisfatórias:</strong> Invista em hobbies, esportes, atividades físicas e momentos de lazer que promovam o bem-estar.</li>
+                    <li><strong>Bons Hábitos:</strong> Adote uma alimentação saudável e priorize a qualidade do sono, criando uma rotina para dormir.</li>
+                    <li><strong>Consciência Sentimental:</strong> Identifique suas emoções e pensamentos para agir de forma mais consciente.</li>
+                    <li><strong>Atenção ao Presente:</strong> Concentre-se no que está sob seu controle no momento presente para reduzir a angústia.</li>
+                    <li><strong>Busque Ajuda:</strong> Reconhecer o sofrimento emocional é o primeiro passo para procurar apoio terapêutico e melhorar sua qualidade de vida.</li>
+                    <li><strong>Exposição ao Sol:</strong> A exposição ao sol é essencial para a nossa saúde física e mental. A luz solar desempenha um papel crucial na regulação dos neurotransmissores. <a href="https://blog.clinicanikolasheine.com.br/beneficios-da-exposicao-solar/" target="_blank">(Saiba mais)</a>.</li>
+                </ul>
+            </section>
+
+            <section id="dados-referencias">
+                <h2>Dados e Referências</h2>
+                <p><strong>Impacto Geral:</strong> Houve um aumento significativo nos quadros de ansiedade e depressão após o início da pandemia de COVID-19. Estima-se que transtornos depressivos 
+                    e ansiosos tiveram um aumento global de 25% com a pandemia. 
+                    <a href="https://www.cofen.gov.br/brasil-enfrenta-uma-segunda-pandemia-agora-na-saude-mental/" target="_blank"> Saiba mais</a> </p>
+                <p><strong>Profissionais de Enfermagem:</strong> Uma sondagem realizada pelo Coren-SP (Conselho Regional de Enfermagem de São Paulo) em setembro de 2021 revelou que 62% dos profissionais 
+                    de enfermagem afirmaram ter desenvolvido sofrimento mental durante a pandemia. 
+                    <a href="https://portal.coren-sp.gov.br/noticias/sondagem-do-coren-sp-62-dos-profissionas-de-enfermagem-afirmaram-ter-desenvolvido-sofrimento-mental-durante-a-pandemia/" target="_blank"> Saiba mais</a> </p>  
+                <p><strong>Agravamento de Quadros Psiquiátricos:</strong> Uma pesquisa da Associação Brasileira de Psiquiatria (ABP) indicou que 47,9% dos psiquiatras entrevistados notaram um aumento nos atendimentos após o início da pandemia, e 89,2% relataram o agravamento de quadros psiquiátricos em pacientes.
+                    <a href="https://www.saude.ce.gov.br/2022/01/24/nova-onda-da-pandemia-acende-alerta-para-cuidados-com-a-saude-mental/" target="_blank"> Saiba mais</a>  
+                </p>  
+                <p><strong>"Saúde Mental em Dados" do Ministério da Saúde:</strong> O Ministério da Saúde publica periodicamente o "Saúde Mental em Dados". A "Edição nº 13" de Fevereiro de 2025 é a mais recente disponível e deve conter informações abrangentes sobre o período solicitado.
+                    <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/s/saude-mental/saude-mental-em-dados/saude-mental-em-dados-edicao-no-13-fevereiro-de-2025/view" target="_blank"> Saiba mais</a>
+                </p> 
+                <p> <strong>história biblica:</strong> <a href="https://www.youtube.com/watch?v=q_d-Wze1IR0&t=395s" target="_blank">historia completa do video acima</a></p> 
+                <p><strong>história Angela Cavallo: </strong><a href="https://noticias.r7.com/monitor7/sim-maes-conseguem-levantar-carro-para-proteger-o-filho-e-isso-ja-aconteceu-ao-menos-uma-vez-08052022/"target="_blank"> R7 Noticias</a></p>  
+                <p>Esta página foi compilada com base em informações de domínio público sobre a campanha Janeiro Branco. Para dados oficiais e mais detalhes, recomendamos a consulta de fontes governamentais e de saúde.</p>
+                <p>Para mais informações, você pode consultar a notícia completa no site oficial do INSS: <a href="https://www.gov.br/inss/pt-br/noticias/janeiro-branco-mes-de-conscientizacao-pela-saude-mental-e-emocional" target="_blank">Janeiro Branco: mês de conscientização pela saúde mental e emocional</a>.</p>
+            </section>
+
+            <!-- ========= SEÇÃO DE DIÁRIO ========= -->
+        <section id="diario">
+        <h2>Diário da Comunidade</h2>
+        <p>Compartilhe seus pensamentos, sentimentos ou uma mensagem de apoio. Este é um espaço seguro para todos.</p>
+
+        <!-- O formulário agora aponta para a nossa view -->
+            <form method="POST" action="{% url 'pagina_principal' %}">
+    {% csrf_token %}
+    <textarea name="mensagem" placeholder="Escreva sua mensagem aqui..." required rows="4"></textarea>
+
+    {% if user.is_authenticated %}
+    <div>
+        <input type="checkbox" name="anonimo" id="anonimo">
+        <label for="anonimo">Postar como anônimo</label>
+    </div>
+    {% endif %}
+    <button type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+          <div id="mensagens-container">
+    {% for mensagem in mensagens %}
+        <div class="mensagem-item">
+            <p><strong>{{ mensagem.nome_exibicao }}:</strong> {{ mensagem.texto }}</p>
+            <small style="color: #777; font-size: 0.8em;">Em {{ mensagem.data_criacao|date:"d/m/Y H:i" }}</small>
+        </div>
+    {% empty %}
+        <p>Nenhuma mensagem ainda. Seja o primeiro a compartilhar!</p>
+    {% endfor %}
+</div>      
+        
+            <!-- ========= FIM SEÇÃO ========= -->
+
+        
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>Lembre-se: Cuidar da mente é cuidar da vida.</p>
+            <p>Feito por: <a href="https://github.com/andre20034" target="_blank" >André Luis de Sousa Rodrigues</a></p>
+            <p>&copy; 2025 Projeto Vozes das Cores. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

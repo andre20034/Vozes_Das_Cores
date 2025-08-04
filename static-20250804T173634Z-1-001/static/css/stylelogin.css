@@ -1,0 +1,141 @@
+/* Importa a fonte 'Lato' do Google Fonts para um visual moderno e legível */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+    /* Cores principais para o tema Janeiro Branco */
+    --jan-branco-azul-principal: #6495ED; /* Um azul vibrante mas suave (Cornflower Blue) */
+    --jan-branco-azul-claro: #ADD8E6;    /* Um azul mais claro para detalhes (Light Blue) */
+    --jan-branco-cinza-fundo: #F8F8F8;   /* Cinza muito claro para o fundo */
+    --jan-branco-cinza-texto: #555555;   /* Cinza escuro para textos */
+    --jan-branco-cinza-borda: #CCCCCC;   /* Cinza médio para bordas */
+    --jan-branco-branco: #FFFFFF;        /* Branco puro para elementos de destaque */
+    --jan-branco-sombra: rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
+}
+
+body {
+    font-family: 'Lato', sans-serif; /* Aplica a fonte Lato a todo o corpo */
+    background-color: var(--jan-branco-cinza-fundo); /* Fundo cinza claro */
+    color: var(--jan-branco-cinza-texto); /* Cor de texto padrão */
+    display: flex; /* Centraliza o conteúdo na tela */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Garante que o corpo ocupe a altura total da viewport */
+    margin: 0; /* Remove margens padrão do corpo */
+    padding: 20px; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui padding na largura e altura total */
+}
+
+h2 {
+    color: var(--jan-branco-azul-principal); /* Título em azul principal */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 30px; /* Espaçamento abaixo do título */
+    font-size: 2.2em; /* Tamanho da fonte do título */
+    font-weight: 700; /* Peso da fonte mais forte */
+}
+
+form {
+    background-color: var(--jan-branco-branco); /* Fundo branco para o formulário */
+    padding: 40px; /* Espaçamento interno do formulário */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 5px 15px var(--jan-branco-sombra); /* Sombra suave */
+    width: 100%; /* Largura total */
+    max-width: 400px; /* Largura máxima para o formulário */
+    box-sizing: border-box; /* Inclui padding na largura */
+}
+
+form p {
+    margin-bottom: 15px; /* Espaçamento entre parágrafos (onde os campos estarão) */
+}
+
+form label {
+    display: block; /* Cada label em uma nova linha */
+    margin-bottom: 8px; /* Espaçamento abaixo do label */
+    font-weight: 700; /* Texto do label em negrito */
+    color: var(--jan-branco-cinza-texto); /* Cor do label */
+    font-size: 0.95em; /* Tamanho da fonte do label */
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+    width: 100%; /* Largura total para os inputs */
+    padding: 12px; /* Espaçamento interno dos inputs */
+    margin-bottom: 20px; /* Espaçamento abaixo dos inputs */
+    border: 1px solid var(--jan-branco-cinza-borda); /* Borda cinza clara */
+    border-radius: 8px; /* Cantos arredondados para os inputs */
+    font-size: 1em; /* Tamanho da fonte dos inputs */
+    box-sizing: border-box; /* Inclui padding na largura */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave para foco */
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="email"]:focus {
+    border-color: var(--jan-branco-azul-principal); /* Borda azul ao focar */
+    box-shadow: 0 0 0 3px var(--jan-branco-azul-claro); /* Sombra azul clara ao focar */
+    outline: none; /* Remove o contorno padrão do navegador */
+}
+
+button[type="submit"] {
+    background-color: var(--jan-branco-azul-principal); /* Fundo do botão em azul principal */
+    color: var(--jan-branco-branco); /* Texto do botão em branco */
+    padding: 14px 25px; /* Espaçamento interno do botão */
+    border: none; /* Remove borda do botão */
+    border-radius: 8px; /* Cantos arredondados para o botão */
+    cursor: pointer; /* Cursor de "mão" ao passar por cima */
+    font-size: 1.1em; /* Tamanho da fonte do botão */
+    font-weight: 700; /* Peso da fonte do botão */
+    width: 100%; /* Largura total do botão */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+}
+
+button[type="submit"]:hover {
+    background-color: #5A8BD6; /* Um tom de azul ligeiramente mais escuro ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de "levantar" o botão */
+}
+
+button[type="submit"]:active {
+    background-color: #4C7BBF; /* Um tom de azul ainda mais escuro ao clicar */
+    transform: translateY(0); /* Retorna o botão à posição original */
+}
+
+p {
+    text-align: center; /* Centraliza o texto do parágrafo */
+    margin-top: 25px; /* Espaçamento acima do parágrafo */
+    font-size: 0.9em; /* Tamanho da fonte do parágrafo */
+}
+
+p a {
+    color: var(--jan-branco-azul-principal); /* Links em azul principal */
+    text-decoration: none; /* Remove sublinhado padrão do link */
+    font-weight: 700; /* Texto do link em negrito */
+    transition: color 0.3s ease; /* Transição suave para a cor do link */
+}
+
+p a:hover {
+    color: #5A8BD6; /* Cor do link ligeiramente mais escura ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estilos específicos para mensagens de erro do Django (se existirem) */
+.errorlist {
+    color: #E74C3C; /* Vermelho para mensagens de erro */
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove padding padrão */
+    margin-top: -10px; /* Ajusta o espaçamento superior */
+    margin-bottom: 15px; /* Espaçamento inferior */
+    font-size: 0.85em; /* Tamanho da fonte para erros */
+}
+
+.errorlist li {
+    margin-bottom: 5px; /* Espaçamento entre itens da lista de erros */
+}
+
+/* Estilos para o caso de mensagens de formulário Django */
+.helptext {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    display: block; /* Garante que o helptext ocupe sua própria linha */
+}

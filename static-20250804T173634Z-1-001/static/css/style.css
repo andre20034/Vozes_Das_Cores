@@ -1,0 +1,312 @@
+/* --- GERAL E RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Para rolagem suave ao clicar no menu */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9; /* Um cinza muito claro, quase branco */
+    color: #333;
+}
+
+/* --- CONTAINER PARA CENTRALIZAR CONTEÚDO --- */
+.container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* --- CABEÇALHO --- */
+header {
+    background-color: #ffffff;
+    color: #0056b3; /* Um azul sereno e profissional */
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 3px solid #0056b3;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+}
+
+/* --- MENU DE NAVEGAÇÃO --- */
+nav {
+    background: #0056b3;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky; /* Menu fixo no topo ao rolar */
+    top: 0;
+    z-index: 1000; /* Garante que o menu fique sobre outros elementos */
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #ffffff;
+    color: #0056b3;
+}
+
+/* --- CONTEÚDO PRINCIPAL E SEÇÕES --- */
+main {
+    padding: 2rem 0;
+}
+
+section {
+    background: #ffffff;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #0056b3;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e0e0e0;
+    font-size: 1.8rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+strong {
+    color: #004a99; /* Um tom de azul um pouco mais escuro para destaque */
+    font-weight: 700;
+}
+
+/* --- LISTAS --- */
+ul {
+    list-style: none; /* Removemos o estilo padrão */
+    padding-left: 0;
+}
+
+#prevencao ul li {
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%230056b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>') no-repeat left center;
+    padding-left: 35px; /* Espaço para o ícone */
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+/* --- LINKS --- */
+a {
+    color: #0a67cb; /* Azul padrão para links, bem visível */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    background-color: #7e7d7d;
+    color: #f4f4f9;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    color: #f4f4f9;
+    margin-bottom: 0.5rem;
+}
+
+/* --- RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS --- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Estilos para o wrapper das imagens */
+.images-wrapper {
+    display: flex; /* Ativa o Flexbox para organizar os itens em linha */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    gap: 20px; /* Adiciona um espaço de 20px entre as imagens */
+    flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha em telas menores */
+    margin-bottom: 20px; /* Adiciona um espaço abaixo do bloco de imagens */
+}
+
+/* Estilos para cada item de imagem */
+.image-item {
+    text-align: center; /* Centraliza a imagem e a descrição dentro de cada item */
+    max-width: 48%; /* Define a largura máxima para cada imagem, deixando espaço para o gap */
+    box-sizing: border-box; /* Garante que padding e border não aumentem a largura total */
+}
+
+.image-item img {
+    max-width: 100%; /* Garante que a imagem se ajuste ao seu contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Adiciona bordas arredondadas (opcional, mas fica legal!) */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave (opcional) */
+}
+
+.image-item p {
+    font-size: 0.9em; /* Ajusta o tamanho da fonte da descrição */
+    color: #555; /* Cor mais suave para a descrição */
+    margin-top: 5px; /* Espaço entre a imagem e a descrição */
+}
+
+/* Responsividade para telas menores: as imagens podem empilhar */
+@media (max-width: 768px) {
+    .image-item {
+        max-width: 100%; /* Em telas menores, cada imagem ocupa a largura total */
+    }
+}
+
+    /* Estilos para o wrapper das imagens */
+.images-wrapper {
+    display: flex; /* Ativa o Flexbox para organizar os itens em linha */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    gap: 20px; /* Adiciona um espaço de 20px entre as imagens */
+    flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha em telas menores */
+    margin-bottom: 20px; /* Adiciona um espaço abaixo do bloco de imagens */
+}
+
+/* Estilos para cada item de imagem ou vídeo */
+.image-item {
+    text-align: center; /* Centraliza a imagem/vídeo e a descrição dentro de cada item */
+    max-width: 48%; /* Define a largura máxima para cada item, deixando espaço para o gap */
+    box-sizing: border-box; /* Garante que padding e border não aumentem a largura total */
+}
+
+.image-item img {
+    max-width: 100%; /* Garante que a imagem se ajuste ao seu contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Adiciona bordas arredondadas (opcional, mas fica legal!) */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave (opcional) */
+}
+
+/* Estilos específicos para o iframe de vídeo */
+.video-item iframe {
+    width: 100%; /* Garante que o iframe ocupe toda a largura do seu contêiner */
+    height: 200px; /* Defina uma altura fixa ou ajuste conforme necessário */
+    border-radius: 8px; /* Adiciona bordas arredondadas para combinar com as imagens */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para combinar */
+}
+
+.image-item p {
+    font-size: 0.9em; /* Ajusta o tamanho da fonte da descrição */
+    color: #555; /* Cor mais suave para a descrição */
+    margin-top: 5px; /* Espaço entre a imagem/vídeo e a descrição */
+}
+
+/* Responsividade para telas menores: os itens podem empilhar */
+@media (max-width: 768px) {
+    .image-item {
+        max-width: 100%; /* Em telas menores, cada item ocupa a largura total */
+    }
+
+    .video-item iframe {
+        /* Se você quiser ajustar a altura em mobile para ser mais proporcional, pode usar: */
+        height: calc(100vw * 0.5625); /* Proporção 16:9, ajusta a altura baseada na largura da viewport */
+        max-height: 300px; /* Altura máxima para não ficar muito grande */
+    }
+}
+}
+#diario h2 {
+            text-align: center;
+        }
+        
+        #diario p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #diario-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        #diario-form textarea {
+            width: 100%;
+            max-width: 600px;
+            height: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+            resize: vertical;
+        }
+
+        #diario-form button {
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        #diario-form button:hover {
+            background-color: #0077cc;
+        }
+
+        #mensagens-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .mensagem-item {
+            background-color: #f9f9f9;
+            border-left: 5px solid #00aaff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            white-space: pre-wrap; /* Mantém as quebras de linha do usuário */
+            word-wrap: break-word; /* Quebra palavras longas */
+        }
