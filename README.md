@@ -559,41 +559,6 @@ Acesse o Site:
 Abra seu navegador e acesse http://127.0.0.1:8000/.  adicione "admin" (para entrar na pagina de adimministrador); "login" (pagina de logins)
 
 
-```
-+------------------+                   +------------------+
-|                  |                   |                  |
-|       VIEW       |<------------------|     CONTROLLER   |
-| (Templates HTML, |  3. Renderiza     | (app.py: Rotas,  |
-|  CSS,)           |     View          |  Lógica de Fluxo) |
-|                  |                   |                  |
-+------------------+                   +--------^---------+
-         ^                                      |
-         |                                      | 1. Requisição do Usuário
-         |                                      | (e.g., Clicar em botão,
-         |                                      | Enviar formulário)
-         |                                      |
-         |                                      | 2. Interage com
-         |                                      |
-+------------------+                   +--------+---------+
-|                  |                   |                  |
-|   Usuário/Cliente|<----------------->|      MODEL       |
-| (Navegador Web)  |                   | (models.py: Dados,|
-|                  |                   |  Lógica de Negócios) |
-+------------------+                   |                  |
-                                       +------------------+
-                                                ^
-                                                |
-                                                | 4. Persistência
-                                                |    (Leitura/Escrita)
-                                                |
-                                       +------------------+
-                                       |                  |
-                                       |   BANCO DE DADOS |
-                                       |    (mensagens.db)  |
-                                       |                  |
-                                       +------------------+
-
-```
 
 
 Passo 9: Atualizando o Modelo de Dados para Associar Mensagens a Usuários
@@ -986,6 +951,43 @@ Com essa estrutura, você pode:
 4 -Consultar todas as mensagens de um usuário, ou todas as mensagens e saber quem as postou.
 
 ---
+
+```
++------------------+                   +------------------+
+|                  |                   |                  |
+|       VIEW       |<------------------|     CONTROLLER   |
+| (Templates HTML, |  3. Renderiza     | (app.py: Rotas,  |
+|  CSS,)           |     View          |  Lógica de Fluxo) |
+|                  |                   |                  |
++------------------+                   +--------^---------+
+         ^                                      |
+         |                                      | 1. Requisição do Usuário
+         |                                      | (e.g., Clicar em botão,
+         |                                      | Enviar formulário)
+         |                                      |
+         |                                      | 2. Interage com
+         |                                      |
++------------------+                   +--------+---------+
+|                  |                   |                  |
+|   Usuário/Cliente|<----------------->|      MODEL       |
+| (Navegador Web)  |                   | (models.py: Dados,|
+|                  |                   |  Lógica de Negócios) |
++------------------+                   |                  |
+                                       +------------------+
+                                                ^
+                                                |
+                                                | 4. Persistência
+                                                |    (Leitura/Escrita)
+                                                |
+                                       +------------------+
+                                       |                  |
+                                       |   BANCO DE DADOS |
+                                       |    (mensagens.db)  |
+                                       |                  |
+                                       +------------------+
+
+```
+
 
 Um pequeno Projeto com um grande objetivo para apoiar uma causa importante.
 
