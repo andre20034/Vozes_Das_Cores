@@ -94,6 +94,18 @@ vozesdascores_project/
 │   ├── settings.py  <-- Configurações do projeto
 │   ├── urls.py      <-- Rotas principais do projeto
 │   └── wsgi.py
+├── core/ app
+│      ├── __pycache__
+│      ├── migrations
+│      ├── __init__.py
+│      ├── admin.py
+│      ├── apps.py
+|      ├──  forms.py
+|      ├──  models.py
+|      ├──  tests.py
+|      ├──  urls.py
+|      |views.py
+├── db.sqlite3
 └── manage.py        <-- Seu assistente para comandos Django
 ```
 Passo 3: Criando a "App" do Diário
