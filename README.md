@@ -15,7 +15,7 @@ A campanha "Janeiro Branco" é um movimento dedicado à conscientização sobre 
 O projeto conta com as seguintes funcionalidades:
 
 * **Página Informativa:** Uma página inicial que apresenta a campanha, explica a importância da saúde Mental, mostrar a força da mente sobre o corpo.
-* **Diario anônimo de progresso:** Compartilhe anonimamente seu progresso na luta contra os aspectos negativos da vida e incentive outras pessoas.
+* **Diario anônimo :** Compartilhe anonimamente seu progresso na luta contra os aspectos negativos da vida e incentive outras pessoas.
 * **Formulário de Envio:** Um formulário simples e seguro para que qualquer pessoa possa ver sem saber quem é vc.
 
 ## 💻 Tecnologias Utilizadas
